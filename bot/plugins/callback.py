@@ -89,13 +89,13 @@ async def cb_navg(bot, update: CallbackQuery):
 
     else:
         temp_results.append([
-            InlineKeyboardButton("⏪ Back", callback_data=f"navigate({index_val}|back|{query})"),
-            InlineKeyboardButton("Next ⏩", callback_data=f"navigate({index_val}|next|{query})")
+            InlineKeyboardButton("⏪ Ᏼᴀᴄᴋ", callback_data=f"navigate({index_val}|back|{query})"),
+            InlineKeyboardButton("Ｎᴇxᴛ ⏩", callback_data=f"navigate({index_val}|next|{query})")
         ])
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
+            InlineKeyboardButton(f"🔰 Ꮲᴀɢᴇ {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>♻️ JOIN : @AMD_LinkZz... ♻️Found</i> <code>{leng}</code> <i>🗂️ MOVIE NAME :</i> <code>{query}</code>"
+    text=f"<i>♻️Ꭻᴏɪɴ : @AMD_LinkZz...♻️ /n 🗂️ MOVIE NAME :</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
